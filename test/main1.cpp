@@ -13,9 +13,9 @@ int main()
 		for (int i = 0; i < width; i++)
 		{
 			uchar average = (srcMat.at<Vec3b>(j, i)[0] + srcMat.at<Vec3b>(j, i)[1] + srcMat.at<Vec3b>(j, i)[2] / 3);
-			srcMat.at<Vec3b>(j, i)[0] = srcMat.at<Vec3b>(j, i)[1];
-			srcMat.at<Vec3b>(j, i)[1] = srcMat.at<Vec3b>(j, i)[2];
-			srcMat.at<Vec3b>(j, i)[2] = srcMat.at<Vec3b>(j, i)[0];
+			srcMat.at<Vec3b>(j, i)[0] = average;
+			srcMat.at<Vec3b>(j, i)[1] = average;
+			srcMat.at<Vec3b>(j, i)[2] = average;
 
 		}
 	}
